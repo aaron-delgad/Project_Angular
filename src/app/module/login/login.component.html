@@ -4,19 +4,20 @@
     <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 ">
   <mat-card-title-group >
     <img class="mx-2" mat-card-xl-image src="http://www.solofondos.com/wp-content/uploads/2015/11/fondo-para-paginas-web-profesionales-3d-grandes.jpg" >
-    <form class="example-form mx-3" *ngIf="datosForm !=undefined" [formGroup]="datosForm">
+    <form class="example-form mx-3 my-4" *ngIf="datosForm !=undefined" [formGroup]="datosForm">
       <mat-form-field  class="example-full-width" appearance="fill" >
         <mat-label>{{login.nameInputUser}}</mat-label>
         <input type="email" matInput formControlName = "user"
                placeholder="Ex. pat@example.com" >
-        <mat-icon matSuffix>mode_edit</mat-icon>
+        <mat-icon matSuffix>email</mat-icon>
       </mat-form-field>
       <mat-form-field class="example-full-width" appearance="fill">
         <mat-label>{{login.password}}</mat-label>
         <input type="password" matInput formControlName = "password">
-        <mat-icon matSuffix>mode_edit</mat-icon>
+        <mat-icon matSuffix>key</mat-icon>
       </mat-form-field>
-      <button class="mx-4 my-4" mat-flat-button color="primary">{{login.sesion}}</button>
+      <button class="mx-4 my-4" mat-flat-button color="primary">{{login.sesion}}
+        <mat-icon matSuffix>login</mat-icon></button>
     </form>
   </mat-card-title-group>
 </div>

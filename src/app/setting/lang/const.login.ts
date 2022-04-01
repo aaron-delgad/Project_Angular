@@ -3,5 +3,5 @@ export const login = {
   password: 'contraseña',
   errorEmail: 'Por ingrese un correo válido',
   EmailReq: 'El usuario es requerido',
-  sesion: 'Iniciar Sesión'
+  sesion: 'Iniciar Sesión  '
 }
