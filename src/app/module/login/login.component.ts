@@ -3,6 +3,7 @@ import { FormControl, FormGroup, FormGroupDirective, NgForm, Validators} from '@
 import { ErrorStateMatcher} from '@angular/material/core';
 import { login } from './../../setting/lang/const.login';
 import { regexConst } from './../../setting/constants/general.const';
+import { CoreService} from './../../shared/services/core.service';
 
 export class MyErrorStateMatcher implements ErrorStateMatcher {
   isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean {
@@ -23,7 +24,7 @@ export class LoginComponent implements OnInit {
 
   datosForm: FormGroup | undefined;
 
-  constructor() { }
+  constructor(public readonly coreService: CoreService ) { }
 
   ngOnInit(): void {
     this.ngFormLogin();
