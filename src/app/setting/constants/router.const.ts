@@ -1,7 +1,7 @@
 export const routerConst = {
 clear: '',
-login:{
-
+admin:{
+  path: 'admin'
 }
 
 }

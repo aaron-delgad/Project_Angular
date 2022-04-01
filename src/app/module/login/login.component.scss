@@ -4,9 +4,10 @@
   justify-content: center;
 }
 .example-card {
-  margin-top: 100px;
-  max-width: 600px;
+  max-width: 400px;
+  min-width: 300px;
+  margin-top: 50px;
 }
 .example-full-width {
-  width: 95%;
+  max-width: 250px;
 }
