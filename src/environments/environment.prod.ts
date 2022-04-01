@@ -1,3 +1,18 @@
 export const environment = {
-  production: true
+  production: true,
+
+  urlPrincipal: 'https://fakestoreapi.com/',
+    backend:{
+      login: {
+        logearse:''
+      },
+      user:{
+        AllUser: '',
+        SaveUsers:'',
+      },
+      category:{
+        path: ''
+      }
+
+    }
 };

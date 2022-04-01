@@ -34,6 +34,10 @@ export class LoginComponent implements OnInit {
     this.datosForm = new FormGroup({
       user: new FormControl('',[Validators.email,Validators.required]),
       password: new FormControl('',[Validators.pattern(regexConst.email), Validators.required])
-    })
+    });
+  }
+
+  open(){
+    
   }
 }

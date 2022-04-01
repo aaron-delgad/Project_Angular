@@ -28,7 +28,7 @@
               <input type="password" matInput formControlName="password" />
               <mat-icon matSuffix>key</mat-icon>
             </mat-form-field>
-            <button class="mx-4 my-4" mat-flat-button color="primary">
+            <button (click)="open()" class="mx-4 my-4" mat-flat-button color="primary">
               {{ login.sesion }} <mat-icon matSuffix>login</mat-icon>
             </button>
           </form>
