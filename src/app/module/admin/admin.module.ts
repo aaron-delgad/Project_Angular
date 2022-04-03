@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AdminComponent } from './admin.component';
-import { AdminRouting} from './admin.routing';
-
+import { LayoutModule} from './layout/layout.module';
+import { AdminRouting } from './admin.routing';
 
 @NgModule({
   declarations: [
@@ -10,6 +10,7 @@ import { AdminRouting} from './admin.routing';
   ],
   imports: [
     CommonModule,
+    LayoutModule,
     AdminRouting
   ]
 })

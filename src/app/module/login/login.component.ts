@@ -4,6 +4,8 @@ import { ErrorStateMatcher} from '@angular/material/core';
 import { login } from './../../setting/lang/const.login';
 import { regexConst } from './../../setting/constants/general.const';
 import { CoreService} from './../../shared/services/core.service';
+import { Router } from '@angular/router';
+import { routerConst } from 'src/app/setting/constants/router.const';
 
 export class MyErrorStateMatcher implements ErrorStateMatcher {
   isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean {
@@ -24,7 +26,8 @@ export class LoginComponent implements OnInit {
 
   datosForm: FormGroup | undefined;
 
-  constructor(public readonly coreService: CoreService ) { }
+  constructor(public readonly coreService: CoreService,
+    private readonly router:Router ) { }
 
   ngOnInit(): void {
     this.ngFormLogin();
@@ -32,12 +35,12 @@ export class LoginComponent implements OnInit {
 
   ngFormLogin(){
     this.datosForm = new FormGroup({
-      user: new FormControl('',[Validators.email,Validators.required]),
-      password: new FormControl('',[Validators.pattern(regexConst.email), Validators.required])
+      user: new FormControl('radees.24.16@gmail.com',[Validators.email,Validators.required]),
+      password: new FormControl('Aaron71983311@',[Validators.pattern(regexConst.email), Validators.required])
     });
   }
 
   open(){
-    
+    this.router.navigate([routerConst.admin.users.fullpath]);
   }
 }

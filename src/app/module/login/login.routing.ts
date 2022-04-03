@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AdminComponent } from '../admin/admin.component';
 import { routerConst } from './../../setting/constants/router.const';
 import { LoginComponent } from './login.component';
 

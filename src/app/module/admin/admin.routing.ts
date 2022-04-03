@@ -5,8 +5,14 @@ import { AdminComponent } from './admin.component';
 
 const routes: Routes = [
   {
-    path: routerConst.admin.path,
-    component: AdminComponent
+    path: routerConst.clear ,
+    component: AdminComponent,
+    children:[
+      {
+        path: routerConst.admin.users.path,
+        loadChildren: () => import('./users/users.module').then (m => m.UsersModule)
+      }
+    ],
   }
 ];
 
