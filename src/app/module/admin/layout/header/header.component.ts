@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDrawerMode } from '@angular/material/sidenav';
 
 @Component({
   selector: 'angul-header',
@@ -6,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+
+  opened = true;
+  mode: MatDrawerMode = 'side';
 
   constructor() { }
 

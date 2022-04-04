@@ -11,6 +11,10 @@ const routes: Routes = [
       {
         path: routerConst.admin.users.path,
         loadChildren: () => import('./users/users.module').then (m => m.UsersModule)
+      },
+      {
+        path: routerConst.admin.category.path,
+        loadChildren: () => import('./category/category.module').then(m => m.CategoryModule)
       }
     ],
   }
