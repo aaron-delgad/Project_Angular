@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDrawerMode } from '@angular/material/sidenav';
+import { Router } from '@angular/router';
+import { routerConst} from './../../setting/constants/router.const'
 
 @Component({
   selector: 'angul-admin',
@@ -7,9 +10,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminComponent implements OnInit {
 
-  constructor() { }
+  opened = true;
+  mode: MatDrawerMode = 'side';
+
+  constructor(private readonly router: Router) { }
 
   ngOnInit(): void {
+  }
+
+  OpenCategory(){
+    this.router.navigate([routerConst.admin.category.fullpath]);
   }
 
 }

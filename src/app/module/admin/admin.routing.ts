@@ -9,6 +9,9 @@ const routes: Routes = [
     component: AdminComponent,
     children:[
       {
+        path: routerConst.clear, redirectTo:routerConst.admin.users.path, pathMatch:'full'
+      },
+      {
         path: routerConst.admin.users.path,
         loadChildren: () => import('./users/users.module').then (m => m.UsersModule)
       },
