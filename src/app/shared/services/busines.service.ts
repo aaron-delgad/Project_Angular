@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { map, Observable } from 'rxjs';
+import { Users } from './../model/users.model';
 import { environment } from './../../../environments/environment';
 
 @Injectable({
@@ -13,8 +14,8 @@ export class BusinesService {
 
   constructor(private readonly httpClient: HttpClient) { }
 
-  UserAll():Observable<any>{
+  UserAll():Observable<Users[]>{
     return this.httpClient.get(this.UrlUsersAll)
-
+    .pipe(map(resp => Users.create_objects(resp)));
   }
 }

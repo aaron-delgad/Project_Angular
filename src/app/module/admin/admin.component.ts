@@ -22,4 +22,8 @@ export class AdminComponent implements OnInit {
     this.router.navigate([routerConst.admin.category.fullpath]);
   }
 
+  OpenUsers(){
+    this.router.navigate([routerConst.admin.users.fullpath]);
+  }
+
 }
